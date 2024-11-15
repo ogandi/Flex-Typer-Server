@@ -17,7 +17,7 @@ router.get('/api/generate-paragraph/:prompt/:length', async (req, res) => {
         return res.json({filteredReponse})
 
       } catch (error) {
-        console.error(error)
+        console.error(error.response.data)
         res.status(500).send("Error generating content")
       }
   })
